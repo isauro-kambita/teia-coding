@@ -4,6 +4,7 @@ const hbs = require('hbs')
 const { contentType } = require('express/lib/response')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //defining paths
 const publicDirectory = path.join(__dirname, '../public')
@@ -61,6 +62,6 @@ app.get('*', (req, res)=>{
 })
 
 
-app.listen(3000, ()=>{
-    console.log('The app running on port 3000')
+app.listen(port, ()=>{
+    console.log('The app running on port '+ port)
 })
