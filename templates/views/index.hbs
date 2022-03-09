@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather App</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="icon" href="/img/Communication_Tower-256.png">
+    </head>
+    <body>
+        <div class="main">
+            <p class="title">{{title}}</p>
+            {{>header}}
+            <form>
+                <input id="search" placeholder="Search for an endpoint 'payment'">
+                <button>Search</button>
+            </form>
+            <p class="error_msg"></p>
+            <p class="msg"></p>
+            <ul id="list"></ul>
+            <p class="total"></p>
+        </div>
+        
+        {{>footer}}
+    </body>
+    <script src="js/app.js"></script>
+</html>
