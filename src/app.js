@@ -27,7 +27,7 @@ app.get('', (req, res)=>{
 })
 
 app.get('/products', (req, res)=>{
-    res.render('products', {
+    res.render('product', {
         title: 'Products page',
         developer: 'Esaú A. Kambita'
     })
