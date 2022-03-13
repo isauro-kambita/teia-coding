@@ -6,35 +6,30 @@ const message = document.querySelector('.msg')
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
 
-    errorText.textContent = 'Loading...'
-    list.replaceChildren()
+    errorText.textContent = 'Processando...'
 
     if(search.value === ''){
         total.textContent = ''
         message.textContent = ''
-        return errorText.textContent = 'Oooops! You cannot make a request an empty string.'
+        return errorText.textContent = 'Oooops! Não fazer uma pesquisa sem fornecer texto.'
     }
 
-    fetch('http://localhost:8080/api/v1/'+search.value).then((response)=>{
+    fetch('http://api.weatherapi.com/v1/current.json?key=2108f3a910474fb89f3191838220203&q='+search.value+'&lang=pt').then((response)=>{
     response.json().then((data)=>{
+        errorText.textContent = ''
         if(data.error){
             errorText.textContent = ''
-            errorText.textContent = 'An error ocurred.'
+            errorText.textContent = 'Ocorreu um erro.'
         }
 
-        search.value = ''
-        var sum = 0.0
         
-        for(let i = 0; i < data.length; i++){
-            list.innerHTML += '<li id='+data[i].employee.position+'>'+data[i].numPayment+' '+data[i].employee.name+' is '+data[i].employee.position+' and earns $'+data[i].employee.salary+'</li>'
-            sum += data[i].employee.salary
-        }
-        total.textContent = 'The total salary is: $'+sum
-        message.textContent = 'Bellow is the list of employees in our database'
+        total.textContent = 'The total salary is: $'
+        message.textContent = `${data.location.name}/${data.location.region} em ${data.location.country} céu ${data.current.condition.text} e ${data.current.humidity}% chance de chuva.`
         errorText.textContent = ''
+        total.textContent = `Actualização: ${data.current.last_updated}`
         })
     }).catch((error)=>{
-        error.textContent = 'An error ocurred.'
+        error.textContent = 'Ocorreu um erro.'
     })
 })
 

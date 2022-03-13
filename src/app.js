@@ -21,28 +21,28 @@ app.use(express.static(publicDirectory))
 
 app.get('', (req, res)=>{
     res.render('index', {
-        title: 'Weather App',
+        title: 'climApp',
         developer: 'Esaú A. Kambita'
     })
 })
 
 app.get('/products', (req, res)=>{
     res.render('product', {
-        title: 'Products page',
+        title: 'Produtos',
         developer: 'Esaú A. Kambita'
     })
 })
 
 app.get('/about', (req, res)=>{
     res.render('about', {
-        title: 'About page',
+        title: 'Sobre',
         developer: 'Esaú A. Kambita'
     })
 })
 
 app.get('/help', (req, res)=>{
     res.render('help', {
-        title: 'Help page',
+        title: 'Ajuda',
         developer: 'Esaú A. Kambita'
     })
 })
