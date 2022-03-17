@@ -47,7 +47,7 @@ app.get('/help', (req, res)=>{
     })
 })
 
-app.get('/demo', (req, res)=>{
+app.get('/weather', (req, res)=>{
     res.send({
         developer: 'Esaú Kambita',
         profession: 'CTO',

@@ -22,9 +22,7 @@ form.addEventListener('submit', (e)=>{
             errorText.textContent = 'Ocorreu um erro.'
         }
 
-        
-        total.textContent = 'The total salary is: $'
-        message.textContent = `${data.location.name}/${data.location.region} em ${data.location.country} céu ${data.current.condition.text} e ${data.current.humidity}% chance de chuva.`
+        message.textContent = `${data.location.name}/${data.location.region} em ${data.location.country}, ${data.current.condition.text} e ${data.current.humidity}% chance de chuva.`
         errorText.textContent = ''
         total.textContent = `Actualização: ${data.current.last_updated}`
         })
