@@ -1,18 +1,72 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Sobre</title>
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="icon" href="/img/Communication_Tower-256.png">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Sobre nós</title>
+
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
-        <div class="main">
-            <p class="title">{{title}}</p>
-            {{>header}}
-            <img class="portrait" src="/img/FB_IMG_16157997938810551.jpg">
-            <p class="description">{{developer}} (desenvolvedor) com a <span>Cecília Tch. F. Kambita (a esposa)</span></p>
+        {{>_pre}}
+        {{>_navbar}}
+        <div class="container">
+            <h1 class="grey-text">{{title}}</h1>
+            <h2 class="grey-text">Informação brevemente disponível!</h2>
+            <h3 class="grey-text">Aqui você saberá tudo sobre nós.</h3>
         </div>
         
+        <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h1 class="center text-lighten-3 indigo-text light"><i class="material-icons">place</i></h1>
+            <h5 class="center light black-text">Nossos escritórios</h5>
+            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h1 class="center text-lighten-3 indigo-text light"><i class="material-icons">people</i></h1>
+            <h5 class="center light black-text">Clientes satisfeitos</h5>
+
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h1 class="center text-lighten-3 indigo-text light"><i class="material-icons">group_work</i></h1>
+            <h5 class="center light black-text">Produtos & Serviços</h5>
+
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
         {{>footer}}
+
+        <script src="js/jQuery.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/naterialize.mini.js"></script>
+        <script src="js/init.js"></script>
+        <script>
+            var dte = new Date().getFullYear()
+            const value = document.querySelector('.date')
+            value.innerHTML = dte
+        </script>
+
+
     </body>
 </html>

@@ -1,127 +1,115 @@
-body{
-    margin: 0 auto;
-    padding: 0 20px;
-    max-width: 850px;
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
 
-    display: flex;
-    flex-direction: column;
-    min-height: 95vh;
+ body{
+	 display: flex;
+	 flex-direction: column;
+	 min-height: 100vh;
+ }
+
+ .container{
+	 flex-grow: 1;
+ }
+ 
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
 }
 
-.main{
-    flex-grow: 1;
+#navegando{
+	height: 150px;
+	padding: 0 150px;
 }
 
-header{
-    border-bottom: .1px solid silver;
+#links{
+	padding-top: 85px;
 }
 
-header a {
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 26px;
-    color:darkgray;
-    margin: 0 20px;
+#logo-container{
+	padding-top: 0px;
+	margin-right: 2px;
 }
 
-.title{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 62px;
-    color: dimgray;
+
+.brand-logo{
+	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-footer{
-    border-top: 1px solid silver;
-    margin: 15px 0px;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: darkgray;
+#navegando{
+	height: 65px;
+	margin-top: 0;
 }
 
-.portrait{
-    width: 250px;
-    margin: 10px 0;
-    border-radius: 120px;
+#navegando ul{
+	margin-top: 0;
+	padding-top: 0;
 }
 
-.error{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 82px;
-    color: dimgray;
+#search{
+	border-top-left-radius: 200px;
+	border-bottom-left-radius: 200px;
+	width: 300px;
+	border: 1px solid rgb(243, 243, 246);
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	padding-left: 10px;
+	font-size: large;
+	margin-top: 0;
+	height: 38px;
+	color:rgb(80, 76, 76);
 }
 
-form{
-    padding: 10px 0;
-    margin: 20px auto;
+#pre{
+	height: 250px;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
 }
 
-form{
-    padding: 0 0;
-}
-
-form input{
-    height: 46px;
-    width: 360px;
-    border: 1px solid darkgray;
-    font-size: 18px;
-    padding: 0 5px;
-    border-radius: 5px;
-}
-
-form button{
-    height: 50px;
-    width: 80px;
-    margin-top: 0;
-    background-color: dimgray;
-    color: whitesmoke;
-    border: 1px solid darkgray;
-    border-radius: 5px;
+#search-button{
+	border-top-right-radius: 150px;
+	border-bottom-right-radius: 150px;
+	height: 38px;
+	width: 70px;
+	padding-left: 10px;
+	padding-top: 0%;
+	font-size: smaller;
+	padding-top: 0%;
+	font-style: italic;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
-form button:hover{
-    cursor: pointer;
+#text_logo{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	margin-top: 100px;
 }
 
-.description{
-    font-family: Arial, Helvetica, sans-serif;
-    color:darkgray;
+#cadastro{
+	width: 80%;
+}
+#login{
+	width: 80%;
 }
 
-#list{
-    margin: 0;
+
+#carousel{
+	height: 450px !important;
 }
 
-#list li{
-    list-style: none;
-    font-size: 16px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: dimgray;
-    margin: 10px 0;
+.carousel.col .carousel-item{
+	height: 320px;
+	width:500px;
 }
 
-.error_msg{
-    font-size: 22px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: crimson;
-}
-
-.msg{
-    color: dimgray;
-    font-size: 20px;
-    font-family: sans-serif;
-    /*border-bottom: 1px solid darkgray;*/
-}
-
-.total{
-    color: dimgray;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    margin: 0 10px;
-}
-
-.pub{
-    width: 550px;
-    margin: 80px 0;
+.carousel-item img{
+	border-radius: 10px;
+	width: 580px;
 }
 

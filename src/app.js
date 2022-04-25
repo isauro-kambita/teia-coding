@@ -1,10 +1,9 @@
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
-const { contentType } = require('express/lib/response')
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3020
 
 //defining paths
 const publicDirectory = path.join(__dirname, '../public')
@@ -16,7 +15,8 @@ app.set('view engine', 'hbs')
 app.set('views', viewsDirectory)
 hbs.registerPartials(partialsDirectory)
 
-//setting paths
+
+//setting up the public directory
 app.use(express.static(publicDirectory))
 
 app.get('', (req, res)=>{
@@ -26,34 +26,35 @@ app.get('', (req, res)=>{
     })
 })
 
-app.get('/products', (req, res)=>{
-    res.render('product', {
-        title: 'Produtos',
-        developer: 'Esaú A. Kambita'
-    })
-})
-
 app.get('/about', (req, res)=>{
     res.render('about', {
-        title: 'Sobre',
-        developer: 'Esaú A. Kambita'
+        title: 'About us page',
+        available: 'false'
     })
 })
 
-app.get('/help', (req, res)=>{
-    res.render('help', {
-        title: 'Ajuda',
-        developer: 'Esaú A. Kambita'
+app.get('/clientes', (req, res)=>{
+    res.render('clients', {
+        title: 'Client page',
+        available: 'false'
     })
 })
 
-app.get('/weather', (req, res)=>{
-    res.send({
-        developer: 'Esaú Kambita',
-        profession: 'CTO',
-        searching: req.query.search
+app.get('/registo', (req, res)=>{
+    res.render('cadastro', {
+        info: 'Resgisto de cliente',
+        available: 'true'
     })
 })
+
+
+app.get('/login', (req, res)=>{
+    res.render('login', {
+        info: 'Login page',
+        available: 'False'
+    })
+})
+
 
 app.get('*', (req, res)=>{
     res.render('404', {

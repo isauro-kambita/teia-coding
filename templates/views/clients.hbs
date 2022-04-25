@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>404</title>
+        <title>clientes</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
         <title>Alianca Kahossi</title>
 
         <!-- CSS  -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
+    
     <body>
         {{>_pre}}
         {{>_navbar}}
-
         <div class="container">
-            <h1 class="grey-text lighten-3">404</h1>
-            <h3 class="grey-text lighten-3">Page not found!</h3>
+            <h1 class="grey-text darken-2">{{title}}</h1>
+            <h3 class="grey-text darken-2">Available: {{available}}</h3>
+            <h3 class="grey-text lighten-2">Brevemente disponivel!</h3>
         </div>
-        
+
         {{>footer}}
 
+        <script src="js/jQuery.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        
         <script>
             var dte = new Date().getFullYear()
             const value = document.querySelector('.date')
             value.innerHTML = dte
         </script>
     </body>
+
 </html>
