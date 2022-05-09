@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link rel="icon" href="img/073_view_show-256.png">
     </head>
 
     <body>
@@ -18,18 +19,19 @@
 
         <div class="container" id="cadastro">
         <br><br><br>
-            <form>
+            <form action="/registo" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="cad_nome" aria-describedby="emailHelp" placeholder="Nome">
+                    <input type="text" name="nome" id="nome" aria-describedby="emailHelp" placeholder="Nome *">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="cad_email" aria-describedby="emailHelp" placeholder="E-mail">
+                    <input type="email" name="email" id="email" aria-describedby="emailHelp" placeholder="E-mail *">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" name="password" id="exampleInputPassword1" placeholder="Password *">
                 </div>
-                <a href="#" id="download-button" class="btn-large waves-effect waves-light indigo lighten-1">Salvar</a>
+                <button class="btn-large waves-effect waves-light indigo lighten-1"><a href="/registo" class="white-text">Salvar</a></button>
             </form>
+            <br>
         </div>
         <br><br>
 

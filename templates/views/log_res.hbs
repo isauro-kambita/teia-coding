@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login</title>
+        <title>Login result</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
         <title>Alianca Kahossi</title>
@@ -12,36 +12,27 @@
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link rel="icon" href="img/073_view_show-256.png">
     </head>
+    
     <body>
         {{>_pre}}
         {{>_navbar}}
-
-        <div class="container" id="login">
-            <br><br><br>
-            <form>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="login_email" aria-describedby="emailHelp" placeholder="E-mail">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <a href="#" id="download-button" class="btn-large waves-effect waves-light indigo lighten-1">Logar</a>
-            </form>
+        <div class="container">
+            <h1 class="grey-text darken-2">{{nome}}</h1>
+            <h3 class="grey-text darken-2">Available: {{available}}</h3>
+            <h3 class="grey-text lighten-2">Brevemente disponivel!</h3>
         </div>
-        <br><br><br>
 
         {{>footer}}
+
         <script src="js/jQuery.js"></script>
         <script src="js/materialize.js"></script>
-        <script src="js/materialize.mini.js"></script>
         <script src="js/init.js"></script>
-
+        
         <script>
             var dte = new Date().getFullYear()
             const value = document.querySelector('.date')
             value.innerHTML = dte
         </script>
-    
     </body>
 
 </html>

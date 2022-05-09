@@ -42,10 +42,20 @@ app.get('/clientes', (req, res)=>{
 
 app.get('/registo', (req, res)=>{
     res.render('cadastro', {
-        info: 'Resgisto de cliente',
-        available: 'true'
+        info: 'Sign up page'
     })
 })
+
+app.post('/registo', (req, res)=>{
+})
+
+app.get('/sending', (req, res)=>{
+    res.render('log_res', {
+        hi: 'Feel welcome',
+        available: false
+    })
+})
+
 
 
 app.get('/login', (req, res)=>{
@@ -53,6 +63,10 @@ app.get('/login', (req, res)=>{
         info: 'Login page',
         available: 'False'
     })
+})
+
+app.post('/login', (req, res)=>{
+    console.log(req.body.cad_nome)
 })
 
 
